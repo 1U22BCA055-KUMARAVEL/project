@@ -6,7 +6,8 @@
 -- Generation Time: Apr 23, 2022 at 06:22 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.22
-
+create Database pgpb;
+use Database pgpb;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -797,3 +798,9 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+CREATE TABLE usr_table (
+    kissan_id INT PRIMARY KEY,
+    password VARCHAR(255) NOT NULL
+);
+
+insert into usr_table values(1,"kumar");

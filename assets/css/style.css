@@ -664,11 +664,15 @@ body {
 }
 
 /* Site-logo */
-.site-title {
-    font-size: 18px;
-    line-height: 26px;
-    color: #ffffff;
+.subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333; /* Darker shade for better readability */
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.5;
 }
+
 
 .site-title:hover {
     color: #26272d;
