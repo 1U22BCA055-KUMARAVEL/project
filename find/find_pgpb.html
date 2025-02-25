@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link href="css/style.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="assets/css/responsive.css" rel="stylesheet"> -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet">
+
+
+   <style>
+      /* #myVideo {
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         min-width: 100%;
+         min-height: 100%;
+         z-index: -2;
+         filter: blur(2px);
+      } */
+
+      * {
+         font-family: roboto;
+
+         color: rgb(12, 12, 12);
+      }
+
+      body {
+         /* background-image: url("img/hero.jpg");
+         background-repeat: no-repeat;*/
+         background-attachment: scroll;
+         background-size: cover;
+
+
+
+
+      }
+
+      select {
+         width: 250px;
+         height: 25px;
+         border: 1px solid rgb(86, 86, 86);
+         background-color: transparent;
+         border-right: none;
+         border-left: none;
+         border-top: none;
+
+      }
+
+      select:focus {
+         outline: none;
+         transition: 0.3s ease;
+      }
+
+      option:focus,
+      option:focus {
+         transition: 0.3s ease;
+      }
+
+      .container {
+         background-color: rgba(182, 179, 179, 0.696);
+         float: right;
+         border-radius: 25px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         flex-direction: column;
+         width: 45%;
+         height: 700px;
+         transform: translate(-100px, -300px);
+         box-shadow: -8px -8px 25px #a0dffe, 8px 8px 52px #51aad3;
+      }
+
+      /* pgpb Output */
+
+      .output {
+
+         border: none;
+         width: 500px;
+         height: 200px;
+         transform: translate(750px, 750px);
+
+      }
+
+      ::placeholder {
+         color: black;
+         padding-left: 10px;
+      }
+
+
+      input {
+         padding: 12px;
+         font-size: larger;
+         font-family: 'Roboto', sans-serif;
+         color: rgb(5, 5, 5);
+         padding: 20px;
+         width: 550px;
+         height: 70px;
+         background: rgba(173, 170, 170, 0.899);
+         border: none
+      }
+
+      input:focus {
+         outline: none;
+
+      }
+
+      /* /end of output */
+      label {
+         color: black;
+
+      }
+
+      .find_btn {
+         width: 300px;
+         height: 80px;
+         font-family: roboto;
+         transform: translate(880px, 420px);
+         font-size: larger;
+         border-radius: 30px;
+         border: none;
+         border-color: rgb(203, 220, 236);
+      }
+
+      .find_btn:hover {
+         background-color: rgb(84, 220, 84);
+         transition: 0.4s ease;
+         border-color: rgb(56, 203, 98);
+         outline: none;
+         box-shadow: -2px -1px 25px #23a249;
+      
+      }
+
+      .search {
+         height: 50px;
+      }
+
+      .plant_gif {
+
+         width: 100px;
+         transform: translate(300px, -70px);
+      }
+     
+   </style>
+</head>
+
+<body background="https://rakeshloginform.w3spaces.com/pot.jpg">
+
+   <form>
+
+
+      <div class="navbar-header">
+
+
+
+
+
+         <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a class="site-title">
+            <span
+               style="font-family: roboto;font-size:45px;">Lets&nbsp;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="font-family:Montserrat;font-size: 30px;color:rgb(139, 2, 0);">Find PGPB</span></a>
+
+      </div>
+      <img class="plant_gif" src="img/plant-gif.gif">
+
+      <div class="output">
+         <input placeholder=" PGPB :">
+      </div>
+
+
+      <div class="container">
+
+         <div class="plant_div">
+            <label>Plant</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select aria-placeholder="Plant"
+               id="selection" onchange="filterfunc()">
+               <option></option>
+               <option> Black locust
+               </option>
+               <option> Japanese clover
+               </option>
+               <option> Alfalfa
+               </option>
+               <option>Avocado
+               </option>
+               <option> Banana
+               </option>
+               <option> Bean
+               </option>
+               <option> Alkali swainsonpea
+               </option>
+            </select></div>
+         <br><br><br>
+         <div class="order_div">
+            <label>Order</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select aria-placeholder="Order"
+               id="selection1" onchange="filterfunc()">
+               <option></option>
+               <option> Fabales
+               </option>
+               <option> Laurales
+               </option>
+               <option> Zingiberales
+               </option>
+               <option> Rosales
+               </option>
+               <option>Cucurbitales
+               </option>
+               <option>Brassicales
+               </option>
+               <option>Myrtales
+               </option>
+            </select></div>
+         <br><br><br>
+
+         <div class="family_div">
+            <label>Family</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="selection2"
+               onchange="filterfunc()">
+               <option></option>
+               <option> Fabaceae
+               </option>
+               <option>Rosaceae
+               </option>
+               <option> Cucurbitaceae
+               </option>
+               <option>Cleomaceae
+               </option>
+               <option> Brassicaceae
+               </option>
+               <option>Myrtaceae
+               </option>
+               <option> Actinidiaceae
+               </option>
+            </select></div>
+         <br><br><br>
+
+         <div class="genus_div">
+            <label>Genus</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select aria-placeholder="Genus"
+               id="selection3" onchange="filterfunc()">
+               <option></option>
+               <option>Robinia
+               </option>
+               <option>Kummerowia
+               </option>
+               <option> Medicago
+               </option>
+               <option>Sphaerophysa
+               </option>
+               <option>Persea
+               </option>
+               <option>Musa
+               </option>
+               <option>Phaseolus
+               </option>
+            </select></div>
+         <br><br><br>
+
+
+         <div class="species_div">
+            <label>Species</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select aria-placeholder="Species"
+               id="selection4" onchange="filterfunc()">
+               <option></option>
+               <option> pseudoacacia
+               </option>
+               <option> striata
+               </option>
+               <option> sativa
+               </option>
+               <option>ruthenica
+               </option>
+               <option> salsula
+               </option>
+               <option>americana
+               </option>
+               <option>paradisiaca
+               </option>
+            </select></div>
+         <br><br><br>
+
+         <div class="type_div">
+            <label>Type</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select aria-placeholder="Type" id="selection5"
+               onchange="filterfunc()">
+               <option></option>
+               <option>Tree
+               </option>
+               <option> Herb
+               </option>
+               <option> Small Tree
+               </option>
+               <option>Vine
+               </option>
+               <option>Scrub
+               </option>
+               <option> Shrubs
+               </option>
+               <option>Creeper Plant
+               </option>
+            </select></div>
+         <br><br><br>
+
+         <div class="com_div">
+   <label class="com_label">Commercial Classification</label>&nbsp;<select aria-placeholder="Commercial Classification" id="selection6"
+               onchange="filterfunc()">
+               <option></option>
+               <option>Food and Medicinal Plant
+               </option>
+               <option> Cattle food
+               </option>
+               <option> Food plant
+               </option>
+db               <option> Growth promoting plant
+               </option>
+               <option> Medicinal plant
+               </option>
+               <option>Animal food plant
+               </option>
+               <option> Herbicide and Medicinal plant
+               </option>
+            </select></div>
+         <br><br><br>
+
+         <div class="source_div">
+            <label>Source</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select aria-placeholder="Source" id="selection7" onchange="filterfunc()">
+               <option></option>
+               <option>Nitrogen Fixation
+               </option>
+               <option> Nitrogen fixation , antibiotic resistance
+               </option>
+               <option> cyanide-degrading bacteria
+               </option>
+               <option> Nitrogen fixation , antibiotic tolerance, salinity-alkalinity,
+               </option>
+               <option> decompose polycyclic aromatic hydrocarbons (PAHs)
+               </option>
+               <option>Prevent diseases
+               </option>
+               <option>Highly tolerant to acid
+               </option>
+            </select></div>
+         <br><br>
+
+
+      </div>
+      <button class="find_btn"><img class="search" src="img/search.gif">&nbsp;&nbsp;&nbsp;&nbsp;</button>
+   </form>
+</body>
+
+<script>
+
+
+
+</script>
+
+</html>
