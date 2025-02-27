@@ -153,11 +153,75 @@
          width: 100px;
          transform: translate(300px, -70px);
       }
-     
+     /* Hamburger Menu */
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger-menu .line {
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+/* Menu Styling */
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #2e7d32;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    z-index: 999;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu a, .menu button {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.menu a:hover, .menu button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
    </style>
+   <script>
+      function toggleMenu() {
+         const menu = document.getElementById("menu");
+         menu.classList.toggle("active");
+      }
+      </script>
 </head>
 
 <body background="https://rakeshloginform.w3spaces.com/pot.jpg">
+
+
 
    <form>
 
